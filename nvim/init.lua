@@ -1,8 +1,12 @@
 require("config.lazy")
 require("config.lsp")
 
+vim.wo.number = true
+vim.o.ignorecase = true
+
 -- Theme
-vim.cmd("colorscheme rose-pine")
+-- vim.cmd("colorscheme rose-pine")
+vim.cmd("colorscheme oxocarbon")
 
 -- Import the necessary modules
 local wk = require("which-key")
@@ -21,5 +25,8 @@ wk.add({
 	{ "<C-l>", "<cmd>wincmd l<cr>", desc = "Navigate to right panel" },
 	{ "<C-k>", "<cmd>wincmd k<cr>", desc = "Navigate to upper panel" },
 	{ "<C-j>", "<cmd>wincmd j<cr>", desc = "Navigate to lower panel" },
+	-- Telescope
+	{ "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find files" },
+	{ "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Find text" },
 })
 
