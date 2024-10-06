@@ -1,13 +1,11 @@
 require("config.lazy")
 require("config.lsp")
 
-vim.wo.number = true
+vim.wo.relativenumber = true
 vim.o.ignorecase = true
-
 -- Theme
 -- vim.cmd("colorscheme rose-pine")
 vim.cmd("colorscheme oxocarbon")
-
 -- Import the necessary modules
 local wk = require("which-key")
 local nvim_tree = require("nvim-tree")
