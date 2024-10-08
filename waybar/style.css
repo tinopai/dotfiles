@@ -1,32 +1,29 @@
 * {
 	font-size: 16px;
-	font-family: monospace;
+	font-family: Fira Code, monospace;
 }
 
 window#waybar {
-	background: #262626;
-	color: #ffffff;
+	background: transparent;
+	color: #cfcfcf;
 }
 
 #custom-right-arrow-dark,
 #custom-left-arrow-dark {
-	color: transparent;
-	background: #262626;
+	color: #181818;
+	background: transparent;
 }
 #custom-right-arrow-light,
 #custom-left-arrow-light {
-	color: #393939;
-	background: #262626;
+	color: #262626;
+	background: #181818;
 }
 
 #clock.2 {
-	background: #393939;
+	background: #262626;
+	font-weight: bold;
 }
 
-#separator {
-	margin: 0 5px;
-	color: #393939;
-}
 
 #workspaces,
 #clock.1,
@@ -37,7 +34,7 @@ window#waybar {
 #battery,
 #disk,
 #tray {
-	background: #262626;
+	background: #181818;
 }
 
 #workspaces button {
@@ -59,18 +56,10 @@ window#waybar {
 
 #pulseaudio {
 	color: #33b1ff;
+	padding: 0 10px;
 }
-#memory {
-	color: #A9A9A9;
-}
-#cpu {
-	color: #A9A9A9;
-}
-#battery {
-	color: #859900;
-}
-#disk {
-	color: #A9A9A9;
+#memory, #cpu, #battery, #disk {
+	color: #AFAFAF;
 }
 
 #clock,
@@ -79,6 +68,5 @@ window#waybar {
 #cpu,
 #battery,
 #disk {
-	padding: 0 10px;
+	padding: 0 12px;
 }
-

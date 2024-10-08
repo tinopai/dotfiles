@@ -5,8 +5,7 @@
 	"position": "top",
 
 	"modules-left": [
-		"sway/workspaces",
-		"custom/right-arrow-dark"
+		
 	],
 	"modules-center":[
 		"custom/left-arrow-dark",
@@ -18,14 +17,11 @@
 		"custom/right-arrow-dark"
 	],
 	"modules-right": [
+		"custom/left-arrow-dark",
 		"pulseaudio",
-		"custom/separator",
 		"memory",
-		"custom/separator",
 		"cpu",
-		"custom/separator",
 		"disk",
-		"custom/separator",
 		"tray"
 	],
 
