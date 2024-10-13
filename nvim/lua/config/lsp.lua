@@ -22,8 +22,18 @@ lsp_zero.extend_lspconfig({
   lsp_attach = lsp_attach,
   capabilities = require('cmp_nvim_lsp').default_capabilities(),
 })
+-- linter
+local null_ls = require("null-ls")
 
-require('mason').setup({})
+null_ls.setup({
+	sources = {
+		null_ls.builtins.diagnostics.clang_check,
+	}
+})
+
+require('mason').setup({
+	-- to:do ensure installed
+})
 require('mason-lspconfig').setup({
   handlers = {
     function(server_name)
@@ -61,7 +71,7 @@ cmp.setup({
   }),
   snippet = {
     expand = function(args)
-      vim.snippet.expand(args.body)
+	vim.snippet.expand(args.body)
     end,
   },
 })

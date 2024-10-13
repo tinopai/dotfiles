@@ -4,5 +4,7 @@ return {
 	{'hrsh7th/cmp-nvim-lsp'},
 	{'hrsh7th/nvim-cmp'},
 	{'williamboman/mason.nvim'},
-	{'williamboman/mason-lspconfig.nvim'}
+	{'williamboman/mason-lspconfig.nvim'},
+	{'L3MON4D3/LuaSnip'},
+	{'jose-elias-alvarez/null-ls.nvim'}
 }

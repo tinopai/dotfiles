@@ -24,6 +24,10 @@ window#waybar {
 	font-weight: bold;
 }
 
+#modules-center {
+	margin-right: 1rem;
+}
+
 
 #workspaces,
 #clock.1,
