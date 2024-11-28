@@ -37,7 +37,24 @@ require('mason').setup({
 require('mason-lspconfig').setup({
   handlers = {
     function(server_name)
-      require('lspconfig')[server_name].setup({})
+	local config = {}
+	
+	if server_name == "clangd" then
+		config = {
+			 cmd = {
+			    "clangd",
+			    "--background-index",
+			    "--clang-tidy",
+			    "--header-insertion=iwyu",
+			    "--completion-style=detailed",
+			    "--query-driver=/usr/bin/clang++",
+			    "--extra-arg=-I/mnt/c/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um",
+			    "--extra-arg=-I/mnt/c/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/shared"
+			  }
+		}
+	end
+
+      require('lspconfig')[server_name].setup(config)
     end,
   },
 })

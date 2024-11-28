@@ -3,9 +3,26 @@ require("config.lsp")
 
 vim.wo.relativenumber = true
 vim.o.ignorecase = true
+
+-- Tab
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
+vim.bo.softtabstop = 4
+
 -- Theme
--- vim.cmd("colorscheme rose-pine")
-vim.cmd("colorscheme oxocarbon")
+vim.opt.termguicolors = true
+vim.opt.background = 'dark' 
+
+require('catppuccin').setup({
+	flavour = "mocha",
+	integrations = {
+		cmp = true,
+		treesitter = true,
+	}
+})
+vim.cmd.colorscheme('catppuccin')
+
 
 -- Leap
 require('leap').create_default_mappings()
